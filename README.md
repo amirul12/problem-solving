@@ -1,8 +1,8 @@
 # problem-solving
 
-Database
+#Database
 
-# 176. Second Highest Salary
+## 176. Second Highest Salary
 
 Table: Employee
 
@@ -20,7 +20,6 @@ Write a solution to find the second highest salary from the Employee table. If t
 
 The result format is in the following example.
 
- 
 
 Example 1:
 
@@ -33,12 +32,14 @@ Employee table:
 | 2  | 200    |
 | 3  | 300    |
 +----+--------+
+
 Output: 
 +---------------------+
 | SecondHighestSalary |
 +---------------------+
 | 200                 |
 +---------------------+
+
 Example 2:
 
 Input: 
@@ -48,6 +49,7 @@ Employee table:
 +----+--------+
 | 1  | 100    |
 +----+--------+
+
 Output: 
 +---------------------+
 | SecondHighestSalary |
@@ -55,6 +57,8 @@ Output:
 | null                |
 +---------------------+
 
--- Solution
-# Write your MySQL query statement below
+# Solution
+## Write your MySQL query statement below
+```MySql
 select max(salary) as SecondHighestSalary  from Employee where salary < (select max(salary) from Employee);
+```
